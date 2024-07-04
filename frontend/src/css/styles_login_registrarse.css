@@ -1,0 +1,191 @@
+.imagen_login {
+    background-image: url('../src/images/ADVENTURE.png');
+    background-size: cover !important;
+    background-position: center;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 8px;
+    box-shadow:  7px 7px 36px #4b78d1,
+                 -7px -7px 36px #6dacff; */
+
+}
+
+/* .container_login{
+    background: rgba(255, 255, 255, 0.992);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 8px;
+    box-shadow:  7px 7px 36px #4b78d1,
+                 -7px -7px 36px #6dacff;
+} */
+.boton {
+    border: none !important;
+    color: #0d83fe;
+    background: none !important;
+    text-decoration: underline;
+}
+
+
+/* REGISTRARSE */
+
+.formu{
+    flex-direction: row;
+    overflow-y: auto;
+    height: 232px;
+    overflow-x: hidden;
+}
+.form1{
+    height: 350px;
+}
+h6 span {
+    color: #000000;
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+.bg-Regis {
+    background: white;
+    height: 25vh;
+    border-radius: 200px 200px 20px 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    display: none;
+}
+
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    padding: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #0b5ed7;
+    opacity: 0.8;
+}
+
+.checkbox:checked+label:before,
+.checkbox:not(:checked)+label:before {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #020305;
+    font-family: "unicons";
+    content: "\eb4f";
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+.checkbox:checked+label:before {
+    transform: translateX(44px) rotate(-270deg);
+}
+
+/* .card-3d-wrap {
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 10000px;
+  margin-top: 60px;
+} */
+.card-3d-wrapper {
+    /* width: 100%;
+  height: 100%; */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+}
+.overfloww{
+    overflow: visible;
+}
+
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    border-radius: 6px;
+    transform-style: preserve-3d;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+
+.center-wrap {
+    background: rgb(255, 0, 0);
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, -50%, 35px) perspective(100px);
+
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    background: repeating-linear-gradient(48deg, #3023ae 0%, #ff0099 100%);
+    border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle3:nth-child(1) {
+    bottom: 7px;
+    /* Cambiado de top a bottom */
+    left: 7px;
+}
+
+.circle3:nth-child(2) {
+    top: 7px;
+    /* Cambiado de bottom a top */
+    right: 7px;
+    animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes move-down1 {
+    to {
+        transform: translateY(1000px);
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
+}
+

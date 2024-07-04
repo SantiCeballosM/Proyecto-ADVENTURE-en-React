@@ -1,0 +1,37 @@
+
+.dragon_dorado{
+    background-image: url('../images/4.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+.gran_muralla{
+    background-image: url('../images/1.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+.bambu_garden{
+    background-image: url('../images/9.png');
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+}
+.el_palacio_de_oriente{
+    background-image: url('../images/7.png');
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+}
+.El_Templo_del_Sésamo{
+    background-image: url('../images/10.png');
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+}
+.jardin_de_sabores{
+    background-image: url('../images/6.png');
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+}

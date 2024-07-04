@@ -1,0 +1,290 @@
+.margin_t{
+    margin: 300px auto;
+  }
+
+  .card2 {
+    width: 100%;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card2-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+  
+  .card2:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+   
+  .circle2 {
+    width: 100px;
+    height: 100px;
+    background: repeating-linear-gradient(48deg, #3023ae 0%, #ff0099 100%);
+    border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle2:nth-child(1) {
+    bottom: -30px; /* Cambiado de top a bottom */
+    left: -30px;
+  }
+  
+  .circle2:nth-child(2) {
+    top: -25px; /* Cambiado de bottom a top */
+    right: -25px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-30px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(30px);
+    }
+  }
+
+
+  .font_cards{
+    font-family: 'CandyBeans';
+    font-size: 20px;
+  }
+
+  .cards{
+    /* width: 1000px !important; */
+    background: rgba( 0, 0, 0, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+  .card3 {
+    width: 800px;
+    height: 300px;
+    border-radius: 4px;
+    display: flex;
+    gap: 5px;
+  }
+
+  
+  .card3 p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: all .5s;
+    background: #082f1d;
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card3 p:hover {
+    flex: 4;
+    border: blue solid;
+  }
+  
+  .card3 p span {
+    min-width: 14em;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: .1em;
+  }
+  
+  .card3 p:hover span {
+    transform: rotate(0);
+  }
+  .cardBox {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+      rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+  }
+  
+  .card_section4 {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: #000814;
+    border-radius: 20px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+  }
+  
+  .card_section4 .h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 800;
+    pointer-events: none;
+    opacity: .5;
+  }
+  
+  .card_section4 .content .h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .card_section4 .content p {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+  
+  .card_section4 .content {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .card_section4:hover .content {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .card_section4:hover .h4 {
+    opacity: 0;
+  }
+  
+  .cardBox::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 900%;
+    background: #40E0D0;
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    transform-origin: center;
+    animation: glowing_401 5s linear infinite;
+  }
+  
+  @keyframes glowing_401 {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width:600px){
+    .card3 {
+      
+      flex-direction: column;
+      width: 300px;
+    }
+    .card3 p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
+      transform: rotate(-0deg);
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: .1em;
+    }
+    .cards{
+      /* width: 1000px !important; */
+      background: rgba( 0, 0, 0, 0.5 );
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur( 11px );
+      -webkit-backdrop-filter: blur( 11px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .text-light{
+      font-size:50px;
+    }
+    .card3 p{
+      height: 200px;
+    }
+
+  }
+  @media (min-width:600px) {
+    .card3 p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
+      transform: rotate(-90deg);
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: .1em;
+    }
+    .cards{
+      /* width: 1000px !important; */
+      background: rgba( 0, 0, 0, 0.5 );
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur( 11px );
+      -webkit-backdrop-filter: blur( 11px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .card3 {
+      /* width: 800px; */
+      width: -webkit-fill-available;
+      height: 300px;
+      border-radius: 4px;
+      display: flex;
+      gap: 5px;
+    }
+  }
+  

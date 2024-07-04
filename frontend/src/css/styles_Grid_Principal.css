@@ -1,0 +1,155 @@
+.text-light {
+  font-family: 'SuperPlants';
+  font-size: 80px;
+  letter-spacing: 10px;
+}
+
+.font {
+  font-family: 'SuperPlants';
+  font-size: 50px !important;
+  letter-spacing: 7px !important;
+}
+
+
+/* GRID PRINCIPAL */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+/* -------------------------------------------------------------- */
+.boton_categoria {
+  text-decoration: none;
+  color: #000000;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  /* Cambia el ancho al 100% para ocupar toda la pantalla */
+  max-width: 400px;
+  /* Agrega un ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+  margin: 0 auto;
+  /* Centra el elemento en la pantalla horizontalmente */
+  background-color: #ffffff;
+  /* Cambia el color de fondo a un tono de gris oscuro */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Ajusta la alineación vertical al final */
+  padding: 20px;
+  /* Aumenta el espacio interior */
+  gap: 20px;
+  /* Aumenta el espacio entre elementos internos */
+  border-radius: 12px;
+  /* Aumenta el radio de borde */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Agrega una sombra suave para un aspecto más profesional */
+  transition: transform 0.3s ease;
+  /* Agrega una transición para una experiencia más suave al hacer hover */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: calc(100% + 10px);
+  /* Ajusta el ancho y el margen para cubrir completamente el elemento .card */
+  height: 100%;
+  border-radius: 12px;
+  /* Ajusta el radio de borde */
+  background: linear-gradient(-45deg, #157648 0%, #40c9ff 100%);
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -2;
+  /* Cambia el valor de z-index para que esté detrás de ::before */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #157648 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.card p:last-child {
+  color: #000000;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-8deg) scaleX(1.34) scaleY(0.77);
+  z-index: -1;
+  /* Cambia el valor de z-index para mantenerlo detrás de ::before durante el hover */
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+/* COLOR DE FONDO DEL GRID PRINCIPAL */
+.bg_grid_principal {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 80px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+@media (max-width:800px) {
+  .parent {
+    display: flex;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex-direction: column;
+  }
+
+  .card text-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card text-center p {
+    font-size: 50px;
+  }
+}
+
+@media (min-width:700px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+}

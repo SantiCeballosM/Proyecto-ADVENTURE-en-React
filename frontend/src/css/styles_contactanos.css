@@ -1,0 +1,113 @@
+/* BARRA DE REDES SOCIALES */
+.container-bar {
+  width: 100%;
+  max-width: 55px;
+  position: fixed;
+  left: 0;
+  top: 25%;
+  z-index: 1000;
+}
+
+.container-bar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  transition: all 500ms ease;
+  color: white;
+}
+
+.container-bar a:hover {
+  background: #1c1c1c;
+}
+
+.container-bar .icon-facebook {
+  background: #3b5998;
+  border-radius: 0px 5px 0px 0px;
+}
+
+.container-bar .icon-whatsapp {
+  background: #0ec143;
+}
+
+.container-bar .icon-instagram {
+  background: #ffca2c;
+}
+
+.container-bar .icon-gplus {
+  background: #c10e0e;
+}
+
+.container-bar .icon-github-squared {
+  background: #000000;
+  border-radius: 0px 0px 5px 0px;
+}
+
+.container-bar #title {
+  position: fixed;
+  background: #1c1c1c;
+  padding: 6px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-top: -4px;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container-bar a:hover #title {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 30px;
+
+}
+
+.container-bar #title::after {
+  position: absolute;
+  content: '';
+  border-left: 7px solid transparent;
+  border-right: 6px solid #1c1c1c;
+  ;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  right: 100%;
+  top: 8px;
+}
+
+#btn-social {
+  display: none;
+}
+
+/* Estilo del botón personalizado */
+.custom-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px 3%;
+  /* Ajusta el espaciado según tus preferencias */
+  background-color: #2980b9;
+  /* Color de fondo del botón */
+  color: #fff;
+  /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  /* Bordes redondeados */
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.custom-button:hover {
+  background-color: #2980b9;
+  /* Cambia el color de fondo al pasar el mouse */
+}
+
+.icon-social {
+  transition: all 0.4s;
+  transform: translatex(0%);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-social:checked~.icon-social {
+  transform: translatex(-100%);
+}
+
+/*-------------------------------------------------------------------- */
